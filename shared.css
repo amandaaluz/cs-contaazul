@@ -139,7 +139,7 @@ body {
 .trilhas-desc { font-size: 15px; color: var(--ca-text-mid); line-height: 1.6; }
 .trilhas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: .75rem;
 }
 .trilha-card {
