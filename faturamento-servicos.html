@@ -1,11 +1,355 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Faturamento de Serviços · Conta Azul</title>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<style>/* ── BRANDBOOK CONTA AZUL 2025-2026 ── */
+/* Fonte primária: Raleway | Secundária: usamos Raleway Light como fallback de Ping Pong */
+/* Cores: #2687E9 (primária), #F9BD1D (secundária), #20262B (texto escuro) */
+
+:root {
+  --ca-blue:        #2687E9;
+  --ca-blue-light:  #5AADF1;
+  --ca-blue-dark:   #1B69C8;
+  --ca-blue-night:  #20262B;
+  --ca-blue-bg:     #EBF5FE;
+  --ca-blue-mid:    #C5DDF8;
+  --ca-yellow:      #F9BD1D;
+  --ca-yellow-dark: #D49A00;
+  --ca-yellow-bg:   #FEF6DC;
+  --ca-green:       #33CC66;
+  --ca-green-dark:  #1B9B45;
+  --ca-green-bg:    #E5F9EE;
+  --ca-neutral-50:  #EFF3F7;
+  --ca-neutral-200: #B9C8D5;
+  --ca-neutral-400: #8093A3;
+  --ca-neutral-600: #536574;
+  --ca-neutral-800: #35414B;
+  --ca-text:        #20262B;
+  --ca-text-mid:    #536574;
+  --ca-text-light:  #8093A3;
+  --ca-border:      #D6E4F0;
+  --ca-bg:          #F2F6FA;
+  --radius:         12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Raleway', -apple-system, sans-serif;
+  background: var(--ca-bg);
+  color: var(--ca-text);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+.nav {
+  background: #fff;
+  border-bottom: 1px solid var(--ca-border);
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo-icon {
+  width: 36px; height: 36px;
+  background: var(--ca-blue);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.nav-logo-icon svg { width: 22px; height: 22px; }
+.nav-logo-name { font-size: 17px; font-weight: 800; color: var(--ca-blue); letter-spacing: -.4px; }
+.nav-logo-sub { font-size: 13px; font-weight: 400; color: var(--ca-text-light); margin-left: 2px; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a {
+  font-size: 13px; font-weight: 600; color: var(--ca-text-mid);
+  text-decoration: none; letter-spacing: .01em; transition: color .15s;
+}
+.nav-links a:hover { color: var(--ca-blue); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--ca-blue);
+  padding: 4.5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 48px;
+  background: var(--ca-bg);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 5px 16px; border-radius: 20px;
+  letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero-kicker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ca-yellow); flex-shrink: 0; }
+.hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800; color: #fff;
+  line-height: 1.18; margin-bottom: 1.25rem;
+  max-width: 680px; margin-left: auto; margin-right: auto;
+  letter-spacing: -.5px;
+}
+.hero h1 em { font-style: normal; color: var(--ca-yellow); }
+.hero-sub {
+  font-size: 16px; color: rgba(255,255,255,.8);
+  max-width: 580px; margin: 0 auto;
+  line-height: 1.75; font-weight: 400;
+}
+
+/* ── WRAPPER ── */
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ── TRILHAS ── */
+.trilhas-section {
+  padding: 3rem 0 2rem;
+}
+.trilhas-header { margin-bottom: 1.75rem; }
+.trilhas-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ca-blue);
+  margin-bottom: .625rem;
+}
+.trilhas-eyebrow-bar {
+  display: inline-block;
+  width: 28px; height: 3px;
+  background: var(--ca-yellow);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.trilhas-title {
+  font-size: 24px; font-weight: 800; color: var(--ca-text);
+  margin-bottom: .5rem; letter-spacing: -.4px; line-height: 1.2;
+}
+.trilhas-title em { font-style: normal; color: var(--ca-blue); }
+.trilhas-desc { font-size: 15px; color: var(--ca-text-mid); line-height: 1.6; }
+.trilhas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: .75rem;
+}
+.trilha-card {
+  background: var(--ca-blue);
+  border-radius: var(--radius);
+  padding: 1.375rem 1.25rem;
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.trilha-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(38,135,233,.25); }
+.trilha-card-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ca-yellow);
+}
+.trilha-card-title { font-size: 14px; font-weight: 800; color: #fff; line-height: 1.3; }
+.trilha-card-desc { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.55; flex: 1; }
+.trilha-card-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--ca-yellow); color: #7A4D00;
+  font-size: 12px; font-weight: 800;
+  padding: 7px 14px; border-radius: 7px;
+  align-self: flex-start; margin-top: .5rem;
+}
+
+/* ── SECTION BLOCK ── */
+.section-block { padding: 2.75rem 0 .75rem; }
+.section-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.375rem; }
+.section-icon {
+  width: 44px; height: 44px; border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.section-icon svg { width: 22px; height: 22px; }
+.section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2px; }
+.section-title { font-size: 21px; font-weight: 800; color: var(--ca-text); margin-bottom: 3px; letter-spacing: -.3px; }
+.section-desc { font-size: 13px; color: var(--ca-text-mid); line-height: 1.55; }
+
+/* ── FEATURE CARDS ── */
+.fc-grid { display: flex; flex-direction: column; gap: .625rem; }
+.fc {
+  background: #fff;
+  border: 1px solid var(--ca-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .15s, transform .15s;
+}
+.fc:hover { box-shadow: 0 3px 16px rgba(38,135,233,.1); transform: translateY(-1px); }
+.fc-inner { display: flex; align-items: stretch; }
+.fc-accent { width: 4px; flex-shrink: 0; }
+.fc-content { flex: 1; padding: 1rem 1.25rem; }
+.fc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: .5rem; }
+.fc-title { font-size: 14px; font-weight: 800; color: var(--ca-text); letter-spacing: -.1px; }
+.fc-path {
+  font-size: 11px; font-family: 'SF Mono', 'Fira Code', monospace;
+  color: var(--ca-text-light); background: var(--ca-neutral-50);
+  padding: 2px 7px; border-radius: 5px; white-space: nowrap; flex-shrink: 0;
+}
+.fc-why-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: .625rem; }
+.why-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 9px;
+  border-radius: 7px; flex-shrink: 0; margin-top: 1px;
+  letter-spacing: .03em; text-transform: uppercase;
+}
+.fc-why-text { font-size: 13px; color: var(--ca-text-mid); line-height: 1.65; }
+.fc-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 700;
+  text-decoration: none;
+  padding: 6px 12px; border-radius: 7px;
+  transition: background .15s; letter-spacing: .01em;
+}
+.fc-link svg { width: 11px; height: 11px; }
+
+/* blue */
+.acc-blue { background: var(--ca-blue); }
+.sec-eye-blue { color: var(--ca-blue); }
+.why-blue { background: var(--ca-blue-bg); color: #134FA0; }
+.fc-link-blue { color: var(--ca-blue); background: var(--ca-blue-bg); }
+.fc-link-blue:hover { background: var(--ca-blue-mid); }
+
+/* yellow */
+.acc-yellow { background: var(--ca-yellow); }
+.sec-eye-yellow { color: var(--ca-yellow-dark); }
+.why-yellow { background: var(--ca-yellow-bg); color: #7A4D00; }
+.fc-link-yellow { color: #7A4D00; background: var(--ca-yellow-bg); }
+.fc-link-yellow:hover { background: #FAECB0; }
+
+/* green */
+.acc-green { background: var(--ca-green); }
+.sec-eye-green { color: var(--ca-green-dark); }
+.why-green { background: var(--ca-green-bg); color: #0D6B2E; }
+.fc-link-green { color: var(--ca-green-dark); background: var(--ca-green-bg); }
+.fc-link-green:hover { background: #C5F2D9; }
+
+/* purple (RevTrack) */
+.acc-purple { background: #7C3AED; }
+.sec-eye-purple { color: #5B21B6; }
+.why-purple { background: #EDE9FE; color: #4C1D95; }
+.fc-link-purple { color: #6D28D9; background: #EDE9FE; }
+.fc-link-purple:hover { background: #DDD6FE; }
+
+/* ── INTEGRATION CARD ── */
+.integration-card {
+  background: #fff;
+  border: 1px solid var(--ca-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .15s, transform .15s;
+}
+.integration-card:hover { box-shadow: 0 3px 16px rgba(124,58,237,.1); transform: translateY(-1px); }
+.integration-inner { display: flex; }
+.integration-accent { width: 4px; background: #7C3AED; flex-shrink: 0; }
+.integration-content { flex: 1; padding: 1.25rem; }
+.integration-header { display: flex; align-items: center; gap: 10px; margin-bottom: .625rem; }
+.integration-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  background: #EDE9FE; color: #6D28D9; padding: 3px 8px; border-radius: 6px;
+}
+.integration-title { font-size: 15px; font-weight: 800; color: var(--ca-text); }
+.integration-desc { font-size: 13px; color: var(--ca-text-mid); line-height: 1.65; margin-bottom: .875rem; }
+
+/* ── DIVIDER ── */
+.section-divider { height: 1px; background: var(--ca-border); margin: .75rem 0; }
+
+/* ── ATENDIMENTO ── */
+.support-section { padding: 2.75rem 0 4rem; }
+.support-title { font-size: 24px; font-weight: 800; color: var(--ca-text); margin-bottom: .25rem; letter-spacing: -.3px; }
+.support-sub { font-size: 14px; color: var(--ca-text-mid); margin-bottom: 2rem; }
+.support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.support-col-title {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ca-blue); margin-bottom: .875rem;
+}
+.support-card {
+  background: #fff; border: 1px solid var(--ca-border);
+  border-radius: var(--radius); padding: 1rem 1.125rem;
+  display: flex; align-items: flex-start; gap: 12px; margin-bottom: .625rem;
+}
+.support-card-icon {
+  width: 36px; height: 36px; border-radius: 9px;
+  background: var(--ca-blue-bg);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.support-card-icon svg { width: 18px; height: 18px; }
+.support-card-title { font-size: 13px; font-weight: 800; color: var(--ca-text); margin-bottom: 2px; }
+.support-card-desc { font-size: 12px; color: var(--ca-text-mid); line-height: 1.55; }
+.support-card-highlight { color: var(--ca-blue); font-weight: 700; }
+.support-card-note {
+  font-size: 11px; color: var(--ca-text-light);
+  border-bottom: 1px dashed var(--ca-yellow); display: inline;
+}
+.col-247 { display: flex; flex-direction: column; gap: .625rem; }
+.col-247-head {
+  background: var(--ca-blue); border-radius: var(--radius);
+  padding: 1rem 1.125rem; margin-bottom: .625rem;
+}
+.col-247-head-title { font-size: 15px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 2px; }
+.col-247-head-sub { font-size: 12px; color: rgba(255,255,255,.72); }
+.card-247 {
+  background: #fff; border: 1px solid var(--ca-border);
+  border-radius: var(--radius); padding: 1rem 1.125rem;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.card-247-icon {
+  width: 36px; height: 36px; border-radius: 9px; background: var(--ca-blue-bg);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.card-247-icon svg { width: 18px; height: 18px; }
+.card-247-label { font-size: 10px; font-weight: 700; color: var(--ca-blue); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
+.card-247-title { font-size: 13px; font-weight: 800; color: var(--ca-text); margin-bottom: 3px; }
+.card-247-desc { font-size: 12px; color: var(--ca-text-mid); line-height: 1.5; }
+
+/* ── FOOTER ── */
+footer { background: var(--ca-blue-night); padding: 2rem; text-align: center; }
+.footer-logo { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: .625rem; }
+.footer-logo-icon {
+  width: 28px; height: 28px; background: var(--ca-blue);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.footer-logo-text { font-size: 14px; font-weight: 800; color: #fff; }
+footer p { font-size: 12px; color: rgba(255,255,255,.38); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 620px) {
+  .nav-links { display: none; }
+  .hero { padding: 3rem 1.25rem 3.5rem; }
+  .fc-top { flex-direction: column; gap: .2rem; }
+  .fc-path { display: none; }
+  .support-grid { grid-template-columns: 1fr; }
+  .trilhas-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-kicker { animation: fadeUp .35s ease both; }
+.hero h1     { animation: fadeUp .35s .08s ease both; }
+.hero-sub    { animation: fadeUp .35s .16s ease both; }
+</style>
 </head>
 <body>
 <nav class="nav">
@@ -32,7 +376,7 @@
     <div class="trilhas-header">
       <div class="trilhas-eyebrow"><span class="trilhas-eyebrow-bar"></span>Trilhas de Conhecimento</div>
       <div class="trilhas-title">Aprofunde-se nos <em>temas que importam</em><br>para o seu negócio.</div>
-      <div class="trilhas-desc">Inscreva-se nos treinamentos ao vivo disponíveis e tire suas dúvidas diretamente com um especialista.</div>
+      <div class="trilhas-desc">Participe de um encontro <strong>ao vivo</strong>, <strong>em grupo</strong> e com um especialista, totalmente focado em um tema específico.</div>
     </div>
     <div class="trilhas-grid">
       <a class="trilha-card" href="https://calendly.com/plantao-duvidas-contaazul" target="_blank">
