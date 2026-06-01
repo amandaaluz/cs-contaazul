@@ -5,351 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Faturamento de Produtos · Conta Azul</title>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<style>/* ── BRANDBOOK CONTA AZUL 2025-2026 ── */
-/* Fonte primária: Raleway | Secundária: usamos Raleway Light como fallback de Ping Pong */
-/* Cores: #2687E9 (primária), #F9BD1D (secundária), #20262B (texto escuro) */
-
-:root {
-  --ca-blue:        #2687E9;
-  --ca-blue-light:  #5AADF1;
-  --ca-blue-dark:   #1B69C8;
-  --ca-blue-night:  #20262B;
-  --ca-blue-bg:     #EBF5FE;
-  --ca-blue-mid:    #C5DDF8;
-  --ca-yellow:      #F9BD1D;
-  --ca-yellow-dark: #D49A00;
-  --ca-yellow-bg:   #FEF6DC;
-  --ca-green:       #33CC66;
-  --ca-green-dark:  #1B9B45;
-  --ca-green-bg:    #E5F9EE;
-  --ca-neutral-50:  #EFF3F7;
-  --ca-neutral-200: #B9C8D5;
-  --ca-neutral-400: #8093A3;
-  --ca-neutral-600: #536574;
-  --ca-neutral-800: #35414B;
-  --ca-text:        #20262B;
-  --ca-text-mid:    #536574;
-  --ca-text-light:  #8093A3;
-  --ca-border:      #D6E4F0;
-  --ca-bg:          #F2F6FA;
-  --radius:         12px;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Raleway', -apple-system, sans-serif;
-  background: var(--ca-bg);
-  color: var(--ca-text);
-  font-size: 16px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ── NAV ── */
-.nav {
-  background: #fff;
-  border-bottom: 1px solid var(--ca-border);
-  padding: 0 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.nav-logo-icon {
-  width: 36px; height: 36px;
-  background: var(--ca-blue);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.nav-logo-icon svg { width: 22px; height: 22px; }
-.nav-logo-name { font-size: 17px; font-weight: 800; color: var(--ca-blue); letter-spacing: -.4px; }
-.nav-logo-sub { font-size: 13px; font-weight: 400; color: var(--ca-text-light); margin-left: 2px; }
-.nav-links { display: flex; gap: 2rem; }
-.nav-links a {
-  font-size: 13px; font-weight: 600; color: var(--ca-text-mid);
-  text-decoration: none; letter-spacing: .01em; transition: color .15s;
-}
-.nav-links a:hover { color: var(--ca-blue); }
-
-/* ── HERO ── */
-.hero {
-  background: var(--ca-blue);
-  padding: 4.5rem 2rem 4rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -1px; left: 0; right: 0;
-  height: 48px;
-  background: var(--ca-bg);
-  clip-path: ellipse(55% 100% at 50% 100%);
-}
-.hero-kicker {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,.13);
-  border: 1px solid rgba(255,255,255,.22);
-  color: #fff; font-size: 11px; font-weight: 700;
-  padding: 5px 16px; border-radius: 20px;
-  letter-spacing: .1em; text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-.hero-kicker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ca-yellow); flex-shrink: 0; }
-.hero h1 {
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 800; color: #fff;
-  line-height: 1.18; margin-bottom: 1.25rem;
-  max-width: 680px; margin-left: auto; margin-right: auto;
-  letter-spacing: -.5px;
-}
-.hero h1 em { font-style: normal; color: var(--ca-yellow); }
-.hero-sub {
-  font-size: 16px; color: rgba(255,255,255,.8);
-  max-width: 580px; margin: 0 auto;
-  line-height: 1.75; font-weight: 400;
-}
-
-/* ── WRAPPER ── */
-.wrap { max-width: 820px; margin: 0 auto; padding: 0 1.5rem; }
-
-/* ── TRILHAS ── */
-.trilhas-section {
-  padding: 3rem 0 2rem;
-}
-.trilhas-header { margin-bottom: 1.75rem; }
-.trilhas-eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 11px; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ca-blue);
-  margin-bottom: .625rem;
-}
-.trilhas-eyebrow-bar {
-  display: inline-block;
-  width: 28px; height: 3px;
-  background: var(--ca-yellow);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-.trilhas-title {
-  font-size: 24px; font-weight: 800; color: var(--ca-text);
-  margin-bottom: .5rem; letter-spacing: -.4px; line-height: 1.2;
-}
-.trilhas-title em { font-style: normal; color: var(--ca-blue); }
-.trilhas-desc { font-size: 15px; color: var(--ca-text-mid); line-height: 1.6; }
-.trilhas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: .75rem;
-}
-.trilha-card {
-  background: var(--ca-blue);
-  border-radius: var(--radius);
-  padding: 1.375rem 1.25rem;
-  text-decoration: none;
-  transition: transform .15s, box-shadow .15s;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-.trilha-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(38,135,233,.25); }
-.trilha-card-tag {
-  font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--ca-yellow);
-}
-.trilha-card-title { font-size: 14px; font-weight: 800; color: #fff; line-height: 1.3; }
-.trilha-card-desc { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.55; flex: 1; }
-.trilha-card-btn {
-  display: inline-flex; align-items: center; gap: 5px;
-  background: var(--ca-yellow); color: #7A4D00;
-  font-size: 12px; font-weight: 800;
-  padding: 7px 14px; border-radius: 7px;
-  align-self: flex-start; margin-top: .5rem;
-}
-
-/* ── SECTION BLOCK ── */
-.section-block { padding: 2.75rem 0 .75rem; }
-.section-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.375rem; }
-.section-icon {
-  width: 44px; height: 44px; border-radius: 11px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.section-icon svg { width: 22px; height: 22px; }
-.section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2px; }
-.section-title { font-size: 21px; font-weight: 800; color: var(--ca-text); margin-bottom: 3px; letter-spacing: -.3px; }
-.section-desc { font-size: 13px; color: var(--ca-text-mid); line-height: 1.55; }
-
-/* ── FEATURE CARDS ── */
-.fc-grid { display: flex; flex-direction: column; gap: .625rem; }
-.fc {
-  background: #fff;
-  border: 1px solid var(--ca-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: box-shadow .15s, transform .15s;
-}
-.fc:hover { box-shadow: 0 3px 16px rgba(38,135,233,.1); transform: translateY(-1px); }
-.fc-inner { display: flex; align-items: stretch; }
-.fc-accent { width: 4px; flex-shrink: 0; }
-.fc-content { flex: 1; padding: 1rem 1.25rem; }
-.fc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: .5rem; }
-.fc-title { font-size: 14px; font-weight: 800; color: var(--ca-text); letter-spacing: -.1px; }
-.fc-path {
-  font-size: 11px; font-family: 'SF Mono', 'Fira Code', monospace;
-  color: var(--ca-text-light); background: var(--ca-neutral-50);
-  padding: 2px 7px; border-radius: 5px; white-space: nowrap; flex-shrink: 0;
-}
-.fc-why-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: .625rem; }
-.why-badge {
-  font-size: 10px; font-weight: 700; padding: 3px 9px;
-  border-radius: 7px; flex-shrink: 0; margin-top: 1px;
-  letter-spacing: .03em; text-transform: uppercase;
-}
-.fc-why-text { font-size: 13px; color: var(--ca-text-mid); line-height: 1.65; }
-.fc-link {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 12px; font-weight: 700;
-  text-decoration: none;
-  padding: 6px 12px; border-radius: 7px;
-  transition: background .15s; letter-spacing: .01em;
-}
-.fc-link svg { width: 11px; height: 11px; }
-
-/* blue */
-.acc-blue { background: var(--ca-blue); }
-.sec-eye-blue { color: var(--ca-blue); }
-.why-blue { background: var(--ca-blue-bg); color: #134FA0; }
-.fc-link-blue { color: var(--ca-blue); background: var(--ca-blue-bg); }
-.fc-link-blue:hover { background: var(--ca-blue-mid); }
-
-/* yellow */
-.acc-yellow { background: var(--ca-yellow); }
-.sec-eye-yellow { color: var(--ca-yellow-dark); }
-.why-yellow { background: var(--ca-yellow-bg); color: #7A4D00; }
-.fc-link-yellow { color: #7A4D00; background: var(--ca-yellow-bg); }
-.fc-link-yellow:hover { background: #FAECB0; }
-
-/* green */
-.acc-green { background: var(--ca-green); }
-.sec-eye-green { color: var(--ca-green-dark); }
-.why-green { background: var(--ca-green-bg); color: #0D6B2E; }
-.fc-link-green { color: var(--ca-green-dark); background: var(--ca-green-bg); }
-.fc-link-green:hover { background: #C5F2D9; }
-
-/* purple (RevTrack) */
-.acc-purple { background: #7C3AED; }
-.sec-eye-purple { color: #5B21B6; }
-.why-purple { background: #EDE9FE; color: #4C1D95; }
-.fc-link-purple { color: #6D28D9; background: #EDE9FE; }
-.fc-link-purple:hover { background: #DDD6FE; }
-
-/* ── INTEGRATION CARD ── */
-.integration-card {
-  background: #fff;
-  border: 1px solid var(--ca-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: box-shadow .15s, transform .15s;
-}
-.integration-card:hover { box-shadow: 0 3px 16px rgba(124,58,237,.1); transform: translateY(-1px); }
-.integration-inner { display: flex; }
-.integration-accent { width: 4px; background: #7C3AED; flex-shrink: 0; }
-.integration-content { flex: 1; padding: 1.25rem; }
-.integration-header { display: flex; align-items: center; gap: 10px; margin-bottom: .625rem; }
-.integration-badge {
-  font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  background: #EDE9FE; color: #6D28D9; padding: 3px 8px; border-radius: 6px;
-}
-.integration-title { font-size: 15px; font-weight: 800; color: var(--ca-text); }
-.integration-desc { font-size: 13px; color: var(--ca-text-mid); line-height: 1.65; margin-bottom: .875rem; }
-
-/* ── DIVIDER ── */
-.section-divider { height: 1px; background: var(--ca-border); margin: .75rem 0; }
-
-/* ── ATENDIMENTO ── */
-.support-section { padding: 2.75rem 0 4rem; }
-.support-title { font-size: 24px; font-weight: 800; color: var(--ca-text); margin-bottom: .25rem; letter-spacing: -.3px; }
-.support-sub { font-size: 14px; color: var(--ca-text-mid); margin-bottom: 2rem; }
-.support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.support-col-title {
-  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--ca-blue); margin-bottom: .875rem;
-}
-.support-card {
-  background: #fff; border: 1px solid var(--ca-border);
-  border-radius: var(--radius); padding: 1rem 1.125rem;
-  display: flex; align-items: flex-start; gap: 12px; margin-bottom: .625rem;
-}
-.support-card-icon {
-  width: 36px; height: 36px; border-radius: 9px;
-  background: var(--ca-blue-bg);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.support-card-icon svg { width: 18px; height: 18px; }
-.support-card-title { font-size: 13px; font-weight: 800; color: var(--ca-text); margin-bottom: 2px; }
-.support-card-desc { font-size: 12px; color: var(--ca-text-mid); line-height: 1.55; }
-.support-card-highlight { color: var(--ca-blue); font-weight: 700; }
-.support-card-note {
-  font-size: 11px; color: var(--ca-text-light);
-  border-bottom: 1px dashed var(--ca-yellow); display: inline;
-}
-.col-247 { display: flex; flex-direction: column; gap: .625rem; }
-.col-247-head {
-  background: var(--ca-blue); border-radius: var(--radius);
-  padding: 1rem 1.125rem; margin-bottom: .625rem;
-}
-.col-247-head-title { font-size: 15px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 2px; }
-.col-247-head-sub { font-size: 12px; color: rgba(255,255,255,.72); }
-.card-247 {
-  background: #fff; border: 1px solid var(--ca-border);
-  border-radius: var(--radius); padding: 1rem 1.125rem;
-  display: flex; align-items: flex-start; gap: 12px;
-}
-.card-247-icon {
-  width: 36px; height: 36px; border-radius: 9px; background: var(--ca-blue-bg);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.card-247-icon svg { width: 18px; height: 18px; }
-.card-247-label { font-size: 10px; font-weight: 700; color: var(--ca-blue); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
-.card-247-title { font-size: 13px; font-weight: 800; color: var(--ca-text); margin-bottom: 3px; }
-.card-247-desc { font-size: 12px; color: var(--ca-text-mid); line-height: 1.5; }
-
-/* ── FOOTER ── */
-footer { background: var(--ca-blue-night); padding: 2rem; text-align: center; }
-.footer-logo { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: .625rem; }
-.footer-logo-icon {
-  width: 28px; height: 28px; background: var(--ca-blue);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-}
-.footer-logo-text { font-size: 14px; font-weight: 800; color: #fff; }
-footer p { font-size: 12px; color: rgba(255,255,255,.38); }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 620px) {
-  .nav-links { display: none; }
-  .hero { padding: 3rem 1.25rem 3.5rem; }
-  .fc-top { flex-direction: column; gap: .2rem; }
-  .fc-path { display: none; }
-  .support-grid { grid-template-columns: 1fr; }
-  .trilhas-grid { grid-template-columns: 1fr; }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.hero-kicker { animation: fadeUp .35s ease both; }
-.hero h1     { animation: fadeUp .35s .08s ease both; }
-.hero-sub    { animation: fadeUp .35s .16s ease both; }
-</style>
+<link rel="stylesheet" href="shared.css">
 </head>
 <body>
 <nav class="nav">
@@ -364,11 +20,12 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
     <span class="nav-logo-name">Conta Azul</span>
     <span class="nav-logo-sub">| Customer Success</span>
   </a>
-  <nav class="nav-links"><a href="#nfe-config">Config. NF-e</a><a href="#cadastros">Cadastros</a><a href="#vendas">Vendas</a><a href="#relatorios">Relatórios</a><a href="#integracao">RevTrack</a><a href="#atendimento">Atendimento</a></nav>
+  <nav class="nav-links"><a href="#notas">Notas Fiscais</a><a href="#config">Config. NF-e</a><a href="#cadastros">Cadastros</a><a href="#vendas">Vendas</a><a href="#estoque">Estoque</a><a href="#relatorios">Relatórios</a><a href="#integracao">RevTrack</a><a href="#atendimento">Atendimento</a></nav>
 </nav>
 <section class="hero">
-  <h1>Cadastre, venda e emita NF-e com <em>agilidade e sem erros.</em></h1>
-  <p class="hero-sub">Cada etapa abaixo foi pensada para que você configure o faturamento de produtos do jeito certo desde o início — entendendo o porquê de cada ação, não só o como.</p>
+  <div class="hero-kicker"><span class="hero-kicker-dot"></span>Treinamento ao vivo</div>
+  <h1>Domine o faturamento, controle seu estoque e <em>venda mais produtos.</em></h1>
+  <p class="hero-sub">Cada etapa abaixo foi pensada para que você configure, cadastre e comece a vender produtos do jeito certo — entendendo o porquê de cada ação, não só o como.</p>
 </section>
 
 <div class="wrap">
@@ -403,15 +60,15 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
 <div class="wrap"><div class="section-divider"></div></div>
 <div class="wrap">
 
-  <!-- CONFIG NF-e -->
-  <div id="nfe-config" class="section-block">
+  <!-- NOTAS FISCAIS -->
+  <div id="notas" class="section-block">
     
     <div class="section-header">
-      <div class="section-icon" style="background:#EBF5FE"><svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3" stroke="#2687E9" stroke-width="1.7"/><path d="M11 2v2.5M11 17.5V20M2 11h2.5M17.5 11H20M4.22 4.22l1.77 1.77M16.01 16.01l1.77 1.77M4.22 17.78l1.77-1.77M16.01 5.99l1.77-1.77" stroke="#2687E9" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="section-icon" style="background:#EBF5FE"><svg viewBox="0 0 22 22" fill="none"><rect x="4" y="2" width="14" height="18" rx="2.5" stroke="#2687E9" stroke-width="1.7"/><path d="M7 7h8M7 11h8M7 15h5" stroke="#2687E9" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div>
-        <div class="section-eyebrow sec-eye-blue">Etapa 1</div>
-        <div class="section-title">Configuração da NF-e</div>
-        <div class="section-desc">Antes de emitir qualquer nota de produto, essas configurações precisam estar feitas corretamente.</div>
+        <div class="section-eyebrow sec-eye-blue">Ponto de partida</div>
+        <div class="section-title">Notas fiscais</div>
+        <div class="section-desc">Antes de emitir qualquer nota, entenda as configurações básicas que habilitam o sistema de faturamento.</div>
       </div>
     </div>
     <div class="fc-grid">
@@ -421,14 +78,47 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-blue"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">NF-e: configuração da nota fiscal de produto</div>
+            <div class="fc-title">Configurações básicas para emissão de notas fiscais</div>
+            <span class="fc-path">Configurações → Config. de Notas Fiscais</span>
+          </div>
+          <div class="fc-why-row">
+            <span class="why-badge why-blue">Por que fazer?</span>
+            <span class="fc-why-text">Sem essas configurações básicas feitas corretamente, o sistema não consegue transmitir nenhuma nota. É o ponto de partida obrigatório antes de qualquer emissão.</span>
+          </div>
+          <a class="fc-link fc-link-blue" href="https://ajuda.contaazul.com/hc/pt-br/articles/115008156488-Notas-fiscais-configura%C3%A7%C3%B5es-b%C3%A1sicas-para-emiss%C3%A3o-de-notas-fiscais" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- CONFIG NF-e -->
+  <div id="config" class="section-block">
+    
+    <div class="section-header">
+      <div class="section-icon" style="background:#EBF5FE"><svg viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3" stroke="#2687E9" stroke-width="1.7"/><path d="M11 2v2.5M11 17.5V20M2 11h2.5M17.5 11H20M4.22 4.22l1.77 1.77M16.01 16.01l1.77 1.77M4.22 17.78l1.77-1.77M16.01 5.99l1.77-1.77" stroke="#2687E9" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div>
+        <div class="section-eyebrow sec-eye-blue">Etapa 1</div>
+        <div class="section-title">Configuração da NF-e</div>
+        <div class="section-desc">Regras de ICMS e configuração específica para emissão de nota fiscal de produto eletrônica.</div>
+      </div>
+    </div>
+    <div class="fc-grid">
+      
+    <div class="fc">
+      <div class="fc-inner">
+        <div class="fc-accent acc-blue"></div>
+        <div class="fc-content">
+          <div class="fc-top">
+            <div class="fc-title">Configurações de nota fiscal de produto (NF-e)</div>
             <span class="fc-path">Configurações → Config. de Notas Fiscais → NF-e</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-blue">Por que fazer?</span>
-            <span class="fc-why-text">A configuração da NF-e conecta o sistema à SEFAZ do seu estado. Sem ela, nenhuma nota de produto pode ser transmitida — é o passo que habilita todo o faturamento.</span>
+            <span class="fc-why-text">A NF-e tem regras específicas de sequência, série e ambiente de emissão. Configurar corretamente garante que a nota tenha validade jurídica e seja aceita pela SEFAZ.</span>
           </div>
-          <a class="fc-link fc-link-blue" href="https://ajuda.contaazul.com/hc/pt-br/articles/7930657143437-NF-e-configura%C3%A7%C3%A3o-da-nota-fiscal-de-produto" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-blue" href="https://ajuda.contaazul.com/hc/pt-br/articles/115008156688-Configura%C3%A7%C3%B5es-de-nota-fiscal-de-produto-NF-e" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -438,14 +128,14 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-blue"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">Regras fiscais: preenchimento automático de impostos</div>
-            <span class="fc-path">Configurações → Config. de Notas Fiscais → Regras Fiscais</span>
+            <div class="fc-title">Regras de ICMS para venda</div>
+            <span class="fc-path">Configurações → Config. de Notas Fiscais → NF-e → Regras de ICMS</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-blue">Por que fazer?</span>
-            <span class="fc-why-text">Com as regras fiscais configuradas, o sistema preenche ICMS, IPI, PIS e COFINS automaticamente em cada venda. Elimina erros de cálculo e acelera muito a emissão das notas.</span>
+            <span class="fc-why-text">As regras de ICMS automatizam o cálculo do imposto na nota. Sem elas, você teria que preencher alíquotas manualmente em cada venda, aumentando o risco de erro fiscal.</span>
           </div>
-          <a class="fc-link fc-link-blue" href="https://ajuda.contaazul.com/hc/pt-br/articles/8016933940365-Regras-Fiscais-preenchimento-autom%C3%A1tico-de-impostos" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-blue" href="https://ajuda.contaazul.com/hc/pt-br/articles/7877209797389-NF-e-como-configurar-as-regras-de-ICMS-para-venda" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -461,7 +151,7 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
       <div>
         <div class="section-eyebrow sec-eye-green">Etapa 2</div>
         <div class="section-title">Cadastros essenciais</div>
-        <div class="section-desc">Clientes e produtos bem cadastrados são a base de um faturamento ágil e sem retrabalho.</div>
+        <div class="section-desc">Clientes e produtos cadastrados tornam cada venda muito mais rápida e as notas fiscais precisas.</div>
       </div>
     </div>
     <div class="fc-grid">
@@ -476,7 +166,7 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-green">Por que fazer?</span>
-            <span class="fc-why-text">Sem o cliente cadastrado não é possível emitir NF-e. Com o CNPJ ou CPF correto no cadastro, o sistema preenche os dados do destinatário automaticamente em cada nota.</span>
+            <span class="fc-why-text">Sem o cliente cadastrado não é possível emitir nota. Com o cadastro completo, as informações preenchem a nota automaticamente — sem risco de erro no CNPJ ou endereço do destinatário.</span>
           </div>
           <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/115007919268-Clientes-como-importar-planilha-com-clientes" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
@@ -488,14 +178,14 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-green"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">Produtos: como importar planilha</div>
-            <span class="fc-path">Produtos → Cadastros → Importar Planilha</span>
+            <div class="fc-title">Produtos</div>
+            <span class="fc-path">Produtos → Cadastros → Novo Produto</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-green">Por que fazer?</span>
-            <span class="fc-why-text">Quem já tem produtos em planilha não precisa cadastrar um por um. A importação sobe todos de uma vez com preço, NCM e unidade — economizando horas de trabalho manual.</span>
+            <span class="fc-why-text">Produtos com NCM, preço e impostos configurados fazem as notas fiscais saírem em segundos. Também é o que permite que o sistema dê baixa automática no estoque a cada venda.</span>
           </div>
-          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/25210437597965-Produtos-como-importar-planilha-com-produtos" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/115007919808-Produtos-como-cadastrar" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -505,14 +195,14 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-green"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">Kit de produtos: o que é e como funciona</div>
-            <span class="fc-path">Produtos → Cadastros → Novo Kit de Produtos</span>
+            <div class="fc-title">Kits de produtos</div>
+            <span class="fc-path">Produtos → Cadastros → Kits de Produtos</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-green">Por que fazer?</span>
-            <span class="fc-why-text">O kit agrupa produtos vendidos juntos em um único item. Agiliza o lançamento de vendas combinadas e garante que o estoque de cada componente seja baixado corretamente.</span>
+            <span class="fc-why-text">Ideal para vender combos ou cestas. Ao vender um kit, o sistema dá baixa individual em cada item que o compõe, mantendo o estoque real sempre atualizado.</span>
           </div>
-          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/29059856490637-Kit-de-produtos-o-que-%C3%A9-e-como-funciona" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/115007920368-Kits-de-produtos-como-cadastrar" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -522,14 +212,14 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-green"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">Produtos: variação ou grade</div>
-            <span class="fc-path">Produtos → Cadastros → Novo Produto → Variação</span>
+            <div class="fc-title">Produtos com variações (cor e tamanho)</div>
+            <span class="fc-path">Produtos → Cadastros → Selecionar Produto → Variações</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-green">Por que fazer?</span>
-            <span class="fc-why-text">Para produtos com tamanho, cor ou outros atributos, a variação mantém tudo sob um único cadastro. O estoque de cada combinação é controlado separadamente sem duplicar produtos.</span>
+            <span class="fc-why-text">Evita cadastrar 10 produtos diferentes para a mesma peça que só muda a cor. Organiza o catálogo e permite controlar o estoque de cada variante separadamente.</span>
           </div>
-          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/8770839779853-Produtos-varia%C3%A7%C3%A3o-ou-grade" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/115008107987-Produtos-com-varia%C3%A7%C3%B5es-como-cadastrar" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -545,7 +235,7 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
       <div>
         <div class="section-eyebrow sec-eye-yellow">Etapa 3</div>
         <div class="section-title">Vendas</div>
-        <div class="section-desc">Como registrar vendas, emitir NF-e e entender os tipos de nota disponíveis na Conta Azul Pro.</div>
+        <div class="section-desc">Onde a operação acontece. Registre vendas, emita notas e envie boletos de forma integrada.</div>
       </div>
     </div>
     <div class="fc-grid">
@@ -555,14 +245,14 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-yellow"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">Venda de produto: como lançar</div>
-            <span class="fc-path">Produtos → Vendas de Produtos → Nova Venda</span>
+            <div class="fc-title">Vendas: como lançar</div>
+            <span class="fc-path">Vendas → Vendas e Orçamentos → Nova Venda</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-yellow">Por que fazer?</span>
-            <span class="fc-why-text">O lançamento de venda registra a receita, baixa o estoque e abre caminho para a emissão da NF-e — tudo em uma única tela. Entender esse fluxo é essencial para faturar com agilidade.</span>
+            <span class="fc-why-text">O lançamento de venda é o que "avisa" o sistema para dar baixa no estoque, gerar o financeiro a receber e habilitar o botão de emissão de nota fiscal.</span>
           </div>
-          <a class="fc-link fc-link-yellow" href="https://ajuda.contaazul.com/hc/pt-br/articles/7661228067853-Venda-de-produto-como-lan%C3%A7ar" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-yellow" href="https://ajuda.contaazul.com/hc/pt-br/articles/115007955528-Vendas-como-lan%C3%A7ar" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -572,14 +262,14 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-yellow"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">NF-e: como emitir nota fiscal de venda de produto</div>
-            <span class="fc-path">Produtos → Notas Fiscais de Produto → Emitir NF-e</span>
+            <div class="fc-title">NF-e: como emitir</div>
+            <span class="fc-path">Vendas → Notas Fiscais de Produto → Emitir NF-e</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-yellow">Por que fazer?</span>
-            <span class="fc-why-text">Com produtos e clientes cadastrados e as configurações fiscais prontas, a emissão da NF-e leva poucos cliques. Esse artigo mostra o caminho completo para transmitir a nota à SEFAZ sem erros.</span>
+            <span class="fc-why-text">Com a venda lançada, a emissão da NF-e leva poucos cliques. Esse artigo mostra o passo a passo para transmitir a nota à SEFAZ e enviar o XML/DANFE por e-mail ao cliente.</span>
           </div>
-          <a class="fc-link fc-link-yellow" href="https://ajuda.contaazul.com/hc/pt-br/articles/7930968275981-NF-e-como-emitir-nota-fiscal-de-venda-de-produto" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-yellow" href="https://ajuda.contaazul.com/hc/pt-br/articles/115008157148-NF-e-como-emitir" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -589,14 +279,64 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
         <div class="fc-accent acc-yellow"></div>
         <div class="fc-content">
           <div class="fc-top">
-            <div class="fc-title">NF-e: quais são as notas fiscais de produto emitidas na Conta Azul Pro</div>
-            <span class="fc-path">Produtos → Notas Fiscais de Produto</span>
+            <div class="fc-title">NF-e: outras operações (devolução, remessa, etc)</div>
+            <span class="fc-path">Vendas → Notas Fiscais de Produto → Nova Nota</span>
           </div>
           <div class="fc-why-row">
             <span class="why-badge why-yellow">Por que fazer?</span>
-            <span class="fc-why-text">Além da venda comum, existem outros tipos de NF-e: devolução, remessa, transferência entre filiais e mais. Conhecer cada um evita emitir a nota errada e ter problemas fiscais depois.</span>
+            <span class="fc-why-text">Nem toda nota é de venda. Saber emitir notas de devolução ou remessa garante que você cumpra a legislação e mantenha o saldo do estoque correto em operações não comerciais.</span>
           </div>
-          <a class="fc-link fc-link-yellow" href="https://ajuda.contaazul.com/hc/pt-br/articles/8793191762957-NF-e-quais-s%C3%A3o-as-notas-fiscais-de-produto-emitidas-na-Conta-Azul-Pro" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+          <a class="fc-link fc-link-yellow" href="https://ajuda.contaazul.com/hc/pt-br/articles/115008157188-NF-e-como-emitir-notas-de-outras-opera%C3%A7%C3%B5es" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="section-divider"></div>
+
+  <!-- ESTOQUE -->
+  <div id="estoque" class="section-block">
+    
+    <div class="section-header">
+      <div class="section-icon" style="background:#E5F9EE"><svg viewBox="0 0 22 22" fill="none"><path d="M11 2L3 7l8 5 8-5-8-5zM3 12l8 5 8-5M3 17l8 5 8-5" stroke="#33CC66" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div>
+        <div class="section-eyebrow sec-eye-green">Etapa 4</div>
+        <div class="section-title">Controle de estoque</div>
+        <div class="section-desc">Saiba exatamente o que tem na prateleira. O estoque integrado evita faltas e excessos.</div>
+      </div>
+    </div>
+    <div class="fc-grid">
+      
+    <div class="fc">
+      <div class="fc-inner">
+        <div class="fc-accent acc-green"></div>
+        <div class="fc-content">
+          <div class="fc-top">
+            <div class="fc-title">Controle de estoque: como utilizar</div>
+            <span class="fc-path">Produtos → Estoque</span>
+          </div>
+          <div class="fc-why-row">
+            <span class="why-badge why-green">Por que fazer?</span>
+            <span class="fc-why-text">O controle centralizado mostra entradas (compras) e saídas (vendas) em tempo real. Essencial para planejar reposições e não perder vendas por falta de produto.</span>
+          </div>
+          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/115007920588-Controle-de-estoque-como-utilizar" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
+        </div>
+      </div>
+    </div>
+      
+    <div class="fc">
+      <div class="fc-inner">
+        <div class="fc-accent acc-green"></div>
+        <div class="fc-content">
+          <div class="fc-top">
+            <div class="fc-title">Inventário de estoque: como fazer</div>
+            <span class="fc-path">Produtos → Estoque → Inventário</span>
+          </div>
+          <div class="fc-why-row">
+            <span class="why-badge why-green">Por que fazer?</span>
+            <span class="fc-why-text">Ocasionalmente o estoque físico diverge do sistema (quebras, perdas). O inventário é a ferramenta para ajustar esses saldos e garantir que o sistema reflita a realidade da loja.</span>
+          </div>
+          <a class="fc-link fc-link-green" href="https://ajuda.contaazul.com/hc/pt-br/articles/115007920708-Invent%C3%A1rio-de-estoque-como-fazer" target="_blank"><svg viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M5.5 2l3.5 3.5L5.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Ver artigo na Central de Ajuda</a>
         </div>
       </div>
     </div>
@@ -610,7 +350,7 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
     <div class="section-header">
       <div class="section-icon" style="background:#EBF5FE"><svg viewBox="0 0 22 22" fill="none"><polyline points="3,16 7,10 11,13 15,7 19,7" stroke="#2687E9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M3 19h16" stroke="#2687E9" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       <div>
-        <div class="section-eyebrow sec-eye-blue">Etapa 4</div>
+        <div class="section-eyebrow sec-eye-blue">Etapa 5</div>
         <div class="section-title">Relatórios de vendas</div>
         <div class="section-desc">Com as vendas lançadas, os relatórios mostram o desempenho comercial em tempo real.</div>
       </div>
@@ -665,6 +405,28 @@ footer p { font-size: 12px; color: rgba(255,255,255,.38); }
   </div>
 
 </div>
+
+<div class="wrap">
+  <div class="section-block">
+    <div class="section-divider"></div>
+    
+    <div class="section-header">
+      <div class="section-icon" style="background:#EBF5FE"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="1.5" stroke="#2687E9" stroke-width="1.7"/><rect x="12" y="2" width="8" height="8" rx="1.5" stroke="#2687E9" stroke-width="1.7"/><rect x="2" y="12" width="8" height="8" rx="1.5" stroke="#2687E9" stroke-width="1.7"/><rect x="12" y="12" width="8" height="8" rx="1.5" stroke="#2687E9" stroke-width="1.7"/></svg></div>
+      <div>
+        <div class="section-eyebrow sec-eye-blue">Conta Azul na Prática</div>
+        <div class="section-title">Aprenda com nossos treinamentos gravados</div>
+        <div class="section-desc">Tenha ajuda dos nossos treinamentos gravados para dominar o ERP Conta Azul e expandir o seu negócio.</div>
+      </div>
+    </div>
+    <div style="margin-top:1.25rem;">
+      <a href="https://napratica.contaazul.com/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#2687E9;color:#fff;font-size:13px;font-weight:800;padding:11px 22px;border-radius:9px;text-decoration:none;transition:opacity .15s;">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM6.5 5.5l4 2.5-4 2.5V5.5z" fill="#fff"/></svg>
+        Acessar Na Prática agora
+      </a>
+    </div>
+  </div>
+</div>
+
 
 <div class="wrap">
   <div id="atendimento" class="support-section">
